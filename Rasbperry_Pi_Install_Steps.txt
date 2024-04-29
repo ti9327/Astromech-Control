@@ -20,7 +20,7 @@ enable vnc
 enable serial
 
 # Disable Bluetooth
-sudo nano /boot/firmware/configt.txt 
+sudo nano /boot/firmware/config.txt 
 add dtovery=disable-bt 
 
 enable splash
@@ -31,7 +31,7 @@ create hidden director in /home/pi called .font
 copy Starjedi.ttf into the .font folder
 
 ## Download the webpage
-git clone https://github.com/greghulette/Astromech-Control
+git clone https://github.com/ti9327/Astromech-Control
 
 ## Setup the autostart of the website
 mkdir /home/pi/.config/lxsession
