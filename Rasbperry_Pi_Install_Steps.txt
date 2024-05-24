@@ -21,7 +21,7 @@ enable serial
 
 # Disable Bluetooth
 sudo nano /boot/firmware/config.txt 
-add dtovery=disable-bt 
+add dtoverlay=disable-bt 
 
 enable splash
 
