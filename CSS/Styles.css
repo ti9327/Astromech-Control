@@ -55,6 +55,26 @@ line-height: 1.5rem;
   -webkit-text-stroke-color: black;
 }
 
+
+.GestureText2{
+  position:relative;
+  top: -75px;
+  left: -10px;
+  width: 190px;
+  font-family: 'Star Jedi', 'Starjedi', arial, camb;
+  color: lightyellow;
+  /* left: 60px; */
+  text-align: center;
+  text-shadow: 0 4px 10px black;
+  text-decoration: solid;
+  line-height: 2rem;
+  font-size: 1.75rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+
+
 .canvas{
   position: absolute;
   top: 60px;
@@ -352,7 +372,7 @@ color: white;
 .Gestures_Quick_Reference2{
   position: absolute;
   top: 40px;
-  left: -500px;
+  left: -400px;
   width: 1000px;
 }
 
