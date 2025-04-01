@@ -14,21 +14,22 @@ body {
 .GesturesPage1{
 position: absolute;
 top: 600px;
-left: -500px;
+left: -450px;
 width: 50px;
 }
 .GesturesPage2{
   position: absolute;
   top: 670px;
-  left: -500px;
+  left: -450px;
   width: 50px;
   }
   .GesturesPage3{
     position: absolute;
     top: 740px;
-    left: -500px;
+    left: -450px;
     width: 50px;
     }
+
 .gesturesBlankFormat{
   width:150px;
   height: 60px;
@@ -314,8 +315,16 @@ color: white;
 .serialportDashboard{
  position: absolute;
  width: 75px;
- top: 855px; 
+ top: 15px; 
+ left: 105px;
 }
+
+.serialportDashboard2{
+  position: absolute;
+  width: 105px;
+  top: 700px; 
+  left: -355px;
+ }
 
 .serialportDashboardDisconnect{
   position: absolute;
@@ -339,6 +348,14 @@ color: white;
   left: -550px;
   width: 1000px;
 }
+
+.Gestures_Quick_Reference2{
+  position: absolute;
+  top: 40px;
+  left: -500px;
+  width: 1000px;
+}
+
 .HomeSounds{
   position: absolute;
   top: 675px;
@@ -456,6 +473,21 @@ line-height: 2.5rem;
   text-decoration: solid;
 line-height: 3rem;
   font-size: 3rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.shadowtext2Lines-3{
+  position:relative;
+  top: -170px;
+  /* left: 60px; */
+  font-family: 'Star Jedi', 'Starjedi', arial, camb;
+
+  text-align: center;
+  text-shadow: 0 4px 10px black;
+  text-decoration: solid;
+line-height: 3rem;
+  font-size: 2.5rem;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
@@ -1213,6 +1245,12 @@ height: 50px;
   height: 90px;
 }
 
+.referenceClass{
+  position: relative;
+  top: -10px;
+  left: 2px;
+  height: 70px;
+}
 
 .testingPie{
   position: absolute;
