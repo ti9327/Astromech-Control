@@ -11,10 +11,37 @@
   <link rel="shortcut icon" href="./Images/r2-d2.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="./CSS/Styles.css" />
   <link rel="stylesheet" href="./CSS/ZoomSlider.css" />
+  <link rel="stylesheet" href="./CSS/leaflet.css" />
   <meta name="viewport" content="width=device-width, initial-scale=.5" />
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/circular-slider.js"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
+  <link rel="stylesheet" href="./CSS/leaflet.css" />
+<!-- 
+  <style>
+    #map { height: 500px; }
+  </style> -->
+
 <!-- <script src="circular-slider.min.js"></script> -->
+
+<style>
+  /* Container fills the viewport and hides overflow */
+  #container {
+    height: 700px;
+  width: 1000px;
+  left: -300px;
+
+  top: 90px;
+    overflow: hidden;
+  }
+  /* Disable image dragging and scaling via CSS */
+  #my-image {
+    max-width: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+</style>
+
 </head>
 
 <body scroll="no" >
@@ -5168,15 +5195,15 @@ id="FrontLogicsTopBlueSelector"
           </div>
         </button>
        </div>
-       <div class="menu-Level-1-Links move4" >
+       <!-- <div class="menu-Level-1-Links move4" >
         <button class="" rel="Gestures">
           <div>
             <img id="Reset_Remote_ESP" class="buttonwidth "  src="./Images/HomeTab/Button-Blank.png">
             <p class="shadowtext2LinesLongLED">gesture reference</p>
           </div>
         </button>
-       </div>
-       <div class="menu-Level-1-Links move5" >
+       </div> -->
+       <div class="menu-Level-1-Links move4" >
         <button class="" rel="WiringDiagram">
           <div>
             <img id="Reset_Remote_ESP" class="buttonwidth "  src="./Images/HomeTab/Button-Blank.png">
@@ -5184,7 +5211,7 @@ id="FrontLogicsTopBlueSelector"
           </div>
         </button>
        </div>
-       <div class="menu-Level-1-Links move6" >
+       <div class="menu-Level-1-Links move5" >
         <button class="" rel="stats">
           <div>
             <img id="Reset_Remote_ESP" class="buttonwidth "  src="./Images/HomeTab/Button-Blank.png">
@@ -5540,6 +5567,48 @@ id="FrontLogicsTopBlueSelector"
 <div class="menu-Level-1-Content " id="WiringDiagram">
   <!-- <img src="Images/Button-LED_Controller_Reset.png" alt="" class="resetLEDController " onclick="resetArduino()"> -->
   <h2 class="gesturesheaders">wiring diagram</h2>
+  <!-- <div id="container">
+    <img id="my-image" src="./Images/Wiring_Diagram/R2D2-Wiring-Diagram.png" alt="Zoomable">
+  </div>
+  <script src="https://unpkg.com/panzoom@9.4.3/dist/panzoom.min.js"></script>
+  <script>
+    // Apply Panzoom to the container element.
+    const container = document.getElementById('container');
+    const panzoomInstance = Panzoom(container, {
+      maxScale: 5,
+      contain: 'outside'
+    });
+    // Enable zooming with the mouse wheel.
+    container.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+  </script> -->
+  <div id="map" class="map"></div>
+  
+  <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+  <script src="./js/leaflet.js"></script>
+  <script>
+    var map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -1,
+      maxZoom: 4
+    });
+
+    // Replace these with your image's actual dimensions.
+    var imageWidth = 12871,
+        imageHeight = 17683;
+
+    var southWest = map.unproject([0, imageHeight], map.getMaxZoom()-1),
+        northEast = map.unproject([imageWidth, 0], map.getMaxZoom()-1),
+        bounds = new L.LatLngBounds(southWest, northEast);
+
+    L.imageOverlay('./Images/Wiring_Diagram/R2D2-Wiring-Diagram.png', bounds).addTo(map);
+    map.fitBounds(bounds);
+  </script>
+
+
+
+
+
+
 
 </div>
 

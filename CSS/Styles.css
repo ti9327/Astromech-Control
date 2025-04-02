@@ -4036,7 +4036,12 @@ label[for= ColorPickertab]{
 }
 
 
+.map{
+  height: 700px;
+  width: 1000px;
+  left: -300px;
 
+  top: 90px;}
 
 
 .menu-Level-0  .menu-Level-0-Content .menu-Level-1{
