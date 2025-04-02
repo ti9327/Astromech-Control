@@ -3592,6 +3592,14 @@ label[for= ColorPicker]{
   top: 200px;
 
 }
+
+label[for= ESP32Picker]{
+  position: relative;
+  left: -360px;
+  top: 200px;
+  font-size: 2rem;
+
+}
 .ESP32Pickertext {
   /* height: 25px; */
   font-size: 2rem;
@@ -3602,7 +3610,7 @@ label[for= ColorPicker]{
 .ESP32PickerLabel{
   position: absolute;
   left: -60px;
-  top: 200px;
+  top: 150px;
 }
 
 .ColorPicker1 {
@@ -4037,11 +4045,11 @@ label[for= ColorPickertab]{
 
 
 .map{
-  height: 700px;
-  width: 1000px;
-  left: -300px;
+  height: 750px;
+  width: 1200px;
+  left: -450px;
 
-  top: 90px;}
+  top: 50px;}
 
 
 .menu-Level-0  .menu-Level-0-Content .menu-Level-1{
